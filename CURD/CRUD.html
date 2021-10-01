@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD</title>
+    </head>
+
+    <body>
+        <style>
+            body
+            {
+                background-image: url('bg.jpg');
+            }
+
+            .container
+            {
+                width: 50%;
+               background-color: #dcf8e2;
+                margin: auto;
+                margin-top: 100px;
+                padding: 40px;
+                text-align: center;
+               
+                border-radius: 5px; 
+            }
+            
+            table{
+                border-collapse: collapse;
+                margin: auto;   
+            }
+            table.list
+            {
+                width: 100%;
+            }
+            td,th
+            {
+                border:  solid rgb(64, 50, 197);
+                text-align: left;
+                padding: 8px;
+            }
+            thead{
+                background-color: rgb(175, 185, 183);
+            }
+            input[type=text], input[type=number] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display:inline-block;
+                border: 1px solid rgb(2, 0, 0);
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=radio],select
+            {
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+            input[type=submit] {
+                width: 30%;
+                background-color: rgb(77, 77, 209);
+                color: rgb(255, 255, 255);
+                padding: 7px 20px;
+                margin: 8px 0;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+           
+            #drop_list
+            {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display:inline-block;
+                border: 1px solid rgb(2, 0, 0);
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .form-action-button
+            {
+                text-align:center;
+            }
+            button
+            {
+                background-color: rgb(44, 163, 103);
+                color: #ffffff;
+                border-radius: 4px;
+            }
+            .scroll
+            {
+                overflow:scroll ;
+                height: 50vh;  
+            }
+
+        </style>
+        <script src="crud_script.js"></script>
+
+        <div class="container"><b> STUDENT FORM</b>
+
+            <table>
+                <tr>
+                    <td>
+                        <form autocomplete="off" onsubmit="event.preventDefault(); onFormSubmit();">
+                            <div>
+                            <label><b>Full Name</b></label>
+                            <input type="text" name="fullname" id="fullname">
+                            </div>
+                            <div>
+                                <label><b>Age</b></label>
+                                <input type="number" name="age" id="age">
+                            </div>
+                             <div>
+                                <label><b>Gender</b></label><br>
+                                <input type="radio" class="gender" id="male" name="gender" value="Male">Male<br>
+                                <input type="radio" class="gender" id="female" name="gender" value="Female">Female<br>
+                                
+                            </div>
+                             <div>
+                                <label><b>Hobby</b></label>
+                                <select id="drop_list">
+                                    <option value="select">Select</option>
+                                    <option value="playing">Playing</option>
+                                    <option value="reading books">Reading Books</option>
+                                    <option value=" watching tv">Watching TV</option>
+                                    <option value="cooking">Cooking</option>
+                                </select>
+                            </div>
+                            <div class="form-action-button">
+                                <input type="submit" name="submit" value="submit">
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+                        <div class="scroll">
+                        <table class="list" id="studentlist">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Hobby</th>
+                                    <th>Oprations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
