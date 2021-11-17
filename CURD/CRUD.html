@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>CRUD</title>
     </head>
@@ -94,28 +94,28 @@
         </style>
         <script src="crud_script.js"></script>
 
-        <div class="container"><b> STUDENT FORM</b>
+        <div class="container"><strong> STUDENT FORM</strong>
 
             <table>
                 <tr>
                     <td>
                         <form autocomplete="off" onsubmit="event.preventDefault(); onFormSubmit();">
                             <div>
-                            <label><b>Full Name</b></label>
+                            <label><strong>Full Name</strong></label>
                             <input type="text" name="fullname" id="fullname" pattern="[a-zA-Z.' ']{3,}" title="Enter valid name">
                             </div>
                             <div>
-                                <label><b>Age</b></label>
+                                <label><strong>Age</strong></label>
                                 <input type="number" name="age" id="age">
                             </div>
                              <div>
-                                <label><b>Gender</b></label><br>
+                                <label><strong>Gender</strong></label><br>
                                 <input type="radio" class="gender" id="male" name="gender" value="Male">Male<br>
                                 <input type="radio" class="gender" id="female" name="gender" value="Female">Female<br>
                                 
                             </div>
                              <div>
-                                <label><b>Hobby</b></label>
+                                <label><strong>Hobby</strong></label>
                                 <select id="drop_list">
                                     <option value="select">Select</option>
                                     <option value="playing">Playing</option>
