@@ -13,7 +13,6 @@ function onFormSubmit()
   updateRecord(formData);
   resetForm();
     }
-    }
 }
 
 function readFormData()
