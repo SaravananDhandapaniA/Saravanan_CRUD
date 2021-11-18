@@ -82,7 +82,7 @@ function updateRecord(formData)
 
 function onDelete(td)
 {
-    row = td.parentElement.parentElement;
+    let row = td.parentElement.parentElement;
     document.getElementById("studentlist").deleteRow(row.rowIndex);
     resetForm();
 }
