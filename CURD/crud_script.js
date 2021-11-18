@@ -9,10 +9,11 @@ function onFormSubmit()
   {
   insertNewRecord(formData);
   }
-  else 
+  else {
   updateRecord(formData);
   resetForm();
-    }
+  }
+ }
 }
 
 function readFormData()
