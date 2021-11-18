@@ -30,15 +30,15 @@ function insertNewRecord(data)
 {
     var table = document.getElementById("studentlist").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    let cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullname;
-    cell2 = newRow.insertCell(1);
+    let cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.age;
-    cell3 = newRow.insertCell(2);
+    let cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.gender;
-    cell4 = newRow.insertCell(3);
+    let cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.drop_list;
-    cell5 = newRow.insertCell(4);
+    let cell5 = newRow.insertCell(4);
     cell5.innerHTML = `<button id="btn1" onClick="onEdit(this)">Edit</button>
                        <button id="btn2" onClick="onDelete(this)">Delete</button>`;
 }
