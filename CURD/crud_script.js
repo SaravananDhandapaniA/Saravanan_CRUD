@@ -6,10 +6,13 @@ function onFormSubmit()
     {
   var formData = readFormData();
   if(selectedRow == null)
+  {
   insertNewRecord(formData);
-  else
+  }
+  else 
   updateRecord(formData);
   resetForm();
+    }
     }
 }
 
@@ -59,10 +62,12 @@ function onEdit(td)
     document.getElementById("fullname").value= selectedRow.cells[0].innerHTML;
     document.getElementById("age").value= selectedRow.cells[1].innerHTML;
     var gender=selectedRow.cells[2].innerHTML;
-    if(gender=="Male")
+    if(gender=="Male"){
         document.getElementById("male").checked=true;
-    else 
+    }
+    else {
         document.getElementById("female").checked=true;
+    }
 
     document.getElementById("drop_list").value= selectedRow.cells[3].innerHTML;
 }
