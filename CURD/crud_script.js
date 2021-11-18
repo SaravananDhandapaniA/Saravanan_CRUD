@@ -11,8 +11,8 @@ function onFormSubmit()
   }
   else {
   updateRecord(formData);
-  resetForm();
   }
+  resetForm();
  }
 }
 
@@ -48,9 +48,9 @@ function resetForm()
     document.getElementById("fullname").value="";
     document.getElementById("age").value="";
     var element=document.getElementsByClassName("gender");
-    for(var i=0;i<element.length;i++)
+    for(let gen of element)
     {
-        element[i].checked=false;
+        gen.checked=false;
     }
     document.getElementById("drop_list").value="";
     selectedRow=null;
